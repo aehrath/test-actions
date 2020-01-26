@@ -1,4 +1,6 @@
 #!/bin/bash
-while read F  ; do
-        echo $F
-done <filelist.txt
+input="filelist.txt"
+while IFS= read -r line
+do
+  echo "$line"
+done < "$input"
