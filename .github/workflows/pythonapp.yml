@@ -29,6 +29,4 @@ jobs:
         pip install pytest
         touch codeA/__init__.py
         touch codeB/__init__.py
-        touch tests/codeA/__init__.py
-        touch tests/codeB/__init__.py
         pytest
