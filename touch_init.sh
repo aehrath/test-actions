@@ -1,8 +1,7 @@
 #!/bin/bash
-input="filelist.txt"
-while IFS= read -r line
+the_packages=$(ls -d */ | grep -v -f pkg_ignore.txt)
+for line in $the_packages
 do
-  echo "$line"
-  touch tests/"$line"/__init__.py
-  touch "$line"/__init__.py
-done < "$input"
+  echo Touching "$line"__init__.py
+  touch "$line"__init__.py
+done
